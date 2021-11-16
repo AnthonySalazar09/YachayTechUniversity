@@ -1,0 +1,19 @@
+#Deber de Algoritmos #5
+#Nombre: Anthony Salazar
+#Paralelo: A
+#Recursividad-Torres de Hanoi
+
+
+def Hanoi (discos,origen,auxiliar,destino):
+    if discos==1:
+        print ("Mover de torre",origen,"a la torre",destino)        
+    else:
+        Hanoi(discos-1,origen,destino,auxiliar)
+        print("Mover de torre",origen,"a la torre",destino)
+        Hanoi (discos-1,auxiliar,origen,destino)
+    return
+discos=int(input("Cantidad de discos: "))
+Hanoi(discos,"A","C","B")
+
+
+
